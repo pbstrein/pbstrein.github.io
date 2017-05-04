@@ -8,7 +8,7 @@
 
   <!-- Title -->
   
-  <title>Hello World - Peter Strein</title>
+  <title>Gap Detector - Peter Strein</title>
 
   <!--Favicon-->
   <link rel="icon" href="favicon/favicon.ico">
@@ -77,21 +77,16 @@
 
   		<div class="row">
   			<div class="col-12 mb-4">
-  <img class="img-fluid project-img" src="/images/unsplash.jpg" alt="Hello World">
+  <img class="img-fluid project-img" src="/images/gap_detector.jpg" alt="Gap Detector">
 </div>
 <div class="col-lg-4 col-12 pt-3 px-4 pr-lg-5">
-  <h1>Hello World</h1>
+  <h1>Gap Detector</h1>
 </div>
 <div class="col-lg-8 col-12 pt-lg-3 mb-4 pl-lg-5 px-lg-0 px-4 portfolio-content">
-  <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+  <p>I created this program to help one of the people on my team, Heather. She had to manage a lot of data from the CloudSat and Calipso (two satelites that collected data for atmosphere scientists.) CIRA at the time was doing a data inventory, organizing and listing what data they had and didn’t have. Heather needed to know which data was missing from her dataset. She asked me to write a program for her. </p>
+<p>My program read the files that she had on her computer, and looked at the timestamps on the data, and if there was any data that had very large gaps, I would create a text file saying which files were missing and when, and when the program finished, I would calcuate how many files were missing based on the size of the gaps, and display the total number of files missing and the number of files missing during each month. That way she could check to see if there were no data files at all (aka the satelite was down) or if somehow the data just did not get sent to her. </p>
+<p>My program could run with commandline arguments or with user interaction in the console. The user would have to give the folder location of the files, the output location of the textfile, the type of file is should be looking for, and how long each orbit of the satelite was supposed to be in seconds.</p>
+<p>The source code can be found at <a href="https://github.com/pbstrein/CIRA_gap_detector" target="_blank" rel="external">https://github.com/pbstrein/CIRA_gap_detector</a>.</p>
 
 </div>
 
