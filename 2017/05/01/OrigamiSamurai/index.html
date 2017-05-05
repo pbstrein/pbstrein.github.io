@@ -8,7 +8,7 @@
 
   <!-- Title -->
   
-  <title>Gap Analyzer - Peter Strein</title>
+  <title>Origami Samurai - Peter Strein</title>
 
   <!--Favicon-->
   <link rel="icon" href="favicon/favicon.ico">
@@ -54,11 +54,11 @@
     <ul class="navbar-nav ml-auto my-auto">
       
         <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
+          <a class="nav-link" href="/About">About</a>
         </li>
       
         <li class="nav-item">
-          <a class="nav-link" href="/resume">Resume</a>
+          <a class="nav-link" href="/Resume">Resume</a>
         </li>
       
         <li class="nav-item">
@@ -77,17 +77,15 @@
 
   		<div class="row">
   			<div class="col-12 mb-4">
-  <img class="img-fluid project-img" src="/images/cloudsat_gapdetector.jpeg" alt="Gap Analyzer">
+  <img class="img-fluid project-img" src="/images/origami_samurai.jpg" alt="Origami Samurai">
 </div>
 <div class="col-lg-4 col-12 pt-3 px-4 pr-lg-5">
-  <h1>Gap Analyzer</h1>
+  <h1>Origami Samurai</h1>
 </div>
 <div class="col-lg-8 col-12 pt-lg-3 mb-4 pl-lg-5 px-lg-0 px-4 portfolio-content">
-  <p>I created this program for CIRA to help detect gaps in the data for the CloudSat satelite in the database located in Fort Collins, CO. The database included the original files from the satelite, and many conversions of that original data into different data formats used by different atmospheric scientists. To convert from one data type to another, certain kinds of files were needed. For example, to create data type GEO, you need just the original data. But to create another data, for example, THERMAL, you need both the original data file and the GEO file. If one of those was missing, you could not create THERMAL. This created a tree like structure, where the children were formed from the parents, and </p>
-<p>As CIRA was doing a data inventory, the scientists needed to know which data was missing from the database and why. My program queried the database, and gathered the information it needed from the database. Then it analyzed all the data it gathered. If there was a file that was missing, the program would recursively search for its parent files. From the recursion search, the program would determine why the file was missing - whether it was an algorithm error (aka, the original data from the satelite existed, but somewhere a conversion didn’t happen, causing this file to not be made) or whether this file was missing because the original satelite data was missing. The program would search based on a tree structure file given to it.</p>
-<p>As the program ran, it would print out all the files missing, all of its parent files missing, and determine which file was the root cause of the problem, to help the scientists know which data they needed to get and how they could get it.</p>
-<p>This program also ran in under a minute, the majority of the time being spent on querying the database for the data, which it then put into a set so that no more queries to the database were needed.</p>
-<p>You can find the sourcecode at <a href="https://github.com/pbstrein/CIRA_gap_analyzer" target="_blank" rel="external">https://github.com/pbstrein/CIRA_gap_analyzer</a></p>
+  <p>Origami Samurai is a video that I tried making in High School with the Digital Animation Club. During my freshman year, I was walking down the hallway and saw an advertisement for making club making a video game. Being the video game/programming nerd that I am, I went to the club. I stayed part of that club all throughout highschool.  Although our group was small and very inexperienced, we did our very best to make a videogame. What we sought out to do was over our heads, but we enjoyed it and we learned a lot from the process.</p>
+<p>The idea of Origami Samurai was to have make a game with an origami art style, focusing on the story of a child growing up. Our goal was to learn how to use 3D animation using Blender, making video games through Unity and C#, and in general creating art.</p>
+<p>I came on as a progammer, using Unity and C# to make the game. I also learned how to use Blender to create models, textures, rigging, and animation. By my sophomore year, I was the student in charge of the Animation Club. I was responsiblefor trying to get new recruits, teach people how to 3D animate, and bringing together art people and computer people to make a game. As the lead, it my was duty to help motivate people to do their work. It was difficult as many people wanted to have fun than make a videogame. But did make a few full rendered videos and created two levels that could be played, one that showcaded our models, and another tutorial used to introduce a new player to the game. I was also in charge of making the game through Unity and C#. </p>
 
 </div>
 

@@ -8,7 +8,7 @@
 
   <!-- Title -->
   
-  <title>BYU Broadcasting - Peter Strein</title>
+  <title>Job Builder - Peter Strein</title>
 
   <!--Favicon-->
   <link rel="icon" href="favicon/favicon.ico">
@@ -77,17 +77,15 @@
 
   		<div class="row">
   			<div class="col-12 mb-4">
-  <img class="img-fluid project-img" src="/images/byu_broadcasting.jpg" alt="BYU Broadcasting">
+  <img class="img-fluid project-img" src="/images/data_conversion.jpg" alt="Job Builder">
 </div>
 <div class="col-lg-4 col-12 pt-3 px-4 pr-lg-5">
-  <h1>BYU Broadcasting</h1>
+  <h1>Job Builder</h1>
 </div>
 <div class="col-lg-8 col-12 pt-lg-3 mb-4 pl-lg-5 px-lg-0 px-4 portfolio-content">
-  <blockquote><p>“See the good in the world.”</p>
-<footer><strong>BYU BroadCasting's Mission</strong></footer></blockquote>
-<p>I started working at BYU Broadcasting in September 2016. I hired into the Digital Media Team as a Computer Programmer for the Platform Group to develop <a href="/2017/05/02/BYUTV/">BYUTV3</a>, a new and updated version of their website. </p>
-<p>The BYU Broadcasting is located on the BYU Campus in Provo, Utah. They create, produce, and distrubute content for millions to see and view. Their mission is to “inspire people to see, do, and be the good in the world.” </p>
-<p>For more information about BYU and BYU Broadcasting, visit <a href="http://www.byutv.org" target="_blank" rel="external">http://www.byutv.org</a>.</p>
+  <p>This program was part of a bigger picture at CIRA. CIRA has the CloudSat, is a satelite collecting data and sending it down every 90 minutes to CIRA. CIRA takes that original data and converts it into many other data types. JobBuilder is the pretty much the queue-maker for that data conversion. It creates “jobs” based on the data file given, and a configuration job, and it creates a job to be sent to the queue to be converted by a different program. The program had to query a MySQL database, find the datafiles it needed, and if the files existed, it would create a job with the specifications so that the converter could get the right files and convert them to the file needed.</p>
+<p>CIRA had this program already in PHP, but they wanted to have a program with similar functionality in Python, so I created a script, following what they did, making minor changes for the change in the language.</p>
+<p>You can find the source code for this at <a href="https://github.com/pbstrein/CIRA_jobbuilder" target="_blank" rel="external">https://github.com/pbstrein/CIRA_jobbuilder</a></p>
 
 </div>
 

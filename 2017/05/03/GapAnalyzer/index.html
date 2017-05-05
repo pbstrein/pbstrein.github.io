@@ -8,7 +8,7 @@
 
   <!-- Title -->
   
-  <title>Gap Detector - Peter Strein</title>
+  <title>Gap Analyzer - Peter Strein</title>
 
   <!--Favicon-->
   <link rel="icon" href="favicon/favicon.ico">
@@ -54,11 +54,11 @@
     <ul class="navbar-nav ml-auto my-auto">
       
         <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
+          <a class="nav-link" href="/About">About</a>
         </li>
       
         <li class="nav-item">
-          <a class="nav-link" href="/resume">Resume</a>
+          <a class="nav-link" href="/Resume">Resume</a>
         </li>
       
         <li class="nav-item">
@@ -77,16 +77,17 @@
 
   		<div class="row">
   			<div class="col-12 mb-4">
-  <img class="img-fluid project-img" src="/images/gap_detector.jpg" alt="Gap Detector">
+  <img class="img-fluid project-img" src="/images/cloudsat_gapdetector.jpeg" alt="Gap Analyzer">
 </div>
 <div class="col-lg-4 col-12 pt-3 px-4 pr-lg-5">
-  <h1>Gap Detector</h1>
+  <h1>Gap Analyzer</h1>
 </div>
 <div class="col-lg-8 col-12 pt-lg-3 mb-4 pl-lg-5 px-lg-0 px-4 portfolio-content">
-  <p>I created this program to help one of the people on my team, Heather. She had to manage a lot of data from the CloudSat and Calipso (two satelites that collected data for atmosphere scientists.) CIRA at the time was doing a data inventory, organizing and listing what data they had and didn’t have. Heather needed to know which data was missing from her dataset. She asked me to write a program for her. </p>
-<p>My program read the files that she had on her computer, and looked at the timestamps on the data, and if there was any data that had very large gaps, I would create a text file saying which files were missing and when, and when the program finished, I would calcuate how many files were missing based on the size of the gaps, and display the total number of files missing and the number of files missing during each month. That way she could check to see if there were no data files at all (aka the satelite was down) or if somehow the data just did not get sent to her. </p>
-<p>My program could run with commandline arguments or with user interaction in the console. The user would have to give the folder location of the files, the output location of the textfile, the type of file is should be looking for, and how long each orbit of the satelite was supposed to be in seconds.</p>
-<p>The source code can be found at <a href="https://github.com/pbstrein/CIRA_gap_detector" target="_blank" rel="external">https://github.com/pbstrein/CIRA_gap_detector</a>.</p>
+  <p>I created this program for CIRA to help detect gaps in the data for the CloudSat satelite in the database located in Fort Collins, CO. The database included the original files from the satelite, and many conversions of that original data into different data formats used by different atmospheric scientists. To convert from one data type to another, certain kinds of files were needed. For example, to create data type GEO, you need just the original data. But to create another data, for example, THERMAL, you need both the original data file and the GEO file. If one of those was missing, you could not create THERMAL. This created a tree like structure, where the children were formed from the parents, and </p>
+<p>As CIRA was doing a data inventory, the scientists needed to know which data was missing from the database and why. My program queried the database, and gathered the information it needed from the database. Then it analyzed all the data it gathered. If there was a file that was missing, the program would recursively search for its parent files. From the recursion search, the program would determine why the file was missing - whether it was an algorithm error (aka, the original data from the satelite existed, but somewhere a conversion didn’t happen, causing this file to not be made) or whether this file was missing because the original satelite data was missing. The program would search based on a tree structure file given to it.</p>
+<p>As the program ran, it would print out all the files missing, all of its parent files missing, and determine which file was the root cause of the problem, to help the scientists know which data they needed to get and how they could get it.</p>
+<p>This program also ran in under a minute, the majority of the time being spent on querying the database for the data, which it then put into a set so that no more queries to the database were needed.</p>
+<p>You can find the sourcecode at <a href="https://github.com/pbstrein/CIRA_gap_analyzer" target="_blank" rel="external">https://github.com/pbstrein/CIRA_gap_analyzer</a></p>
 
 </div>
 
